@@ -156,36 +156,3 @@ list_of_tags = tags.split()
 
 print(list_of_tags)
 
-# Below is a demonstration on how to utilize slice in a few different ways. Brief overview.
-# To slice up lists, tuples, arrays, or strings, you use the below syntax in the print statements.
-
-
-post = ('Python Basics', 'Intro guide to python', 'Some cool python content', 'published')
-
-tags = ['Hello', 'Again', 'And Again']
-
-print(tags[:2]) # This is calling for the tags list, and it is saying to start at the 0'th index, and to end the slice at the beginning of the 2nd index.
-print(post[:2]) # Same as above, calling to begin on the 0'th index, slice ends at the start of the 2nd index.
-
-print (post[1::2]) 
-# The above syntax is another way to be specific, it takes three possible parameters.
-# The first parameter, says start at the beginning of the 1st index.
-# The second parameter, can be used to indicate the end of the slice.
-# The third parameter says how to 'step'. So if we start at 1, and we 'step' 2, then this slice will SPECIFICALLY grab
-# every other index after the 1st index.
-
-post = ('Python Basics', 'Intro guide to python', 'Some cool python content', 'published')
-
-# To remove something from the end of a tuple, see below.
-post = post[:-1]
-
-print(post)
-
-# To remove from the start of the Tuple, see below,.
-post = post[1:]
-
-print(post)
-
-# It is possible to completely remove an element by using the .remove() syntax, however this is a HORRIBLE practice,
-# it is heavily discouraged amongts the programming community.
-
