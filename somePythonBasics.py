@@ -62,7 +62,7 @@ print(sentence)
 # Strings are immutable, meaning we cannot alter the charactes in the string once it has been created. We are able to create a new variable that would be a modified version of our primary variable, but we are not able to modify the primary variable because strings are immutable.
 
 starter_sentence = 'The quick brown fox jumps over the lazy dog'
-print(starter_sentence[12])= 'Z'
+print(starter_sentence[12]) = 'Z'
 print(starter_sentence) 
 
 # The above will not change the 12th index of the starter_sentence variable, because the starter_sentence variable is a string, strings are immutable.
