@@ -21,5 +21,4 @@ weights = {
     "lose" : 3
 }
 
-
 print(weighted_lottery(weights))

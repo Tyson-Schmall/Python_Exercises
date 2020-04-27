@@ -293,3 +293,151 @@ print(cubed_nums)
 
 """
 
+# Below is a showing of how to use slices, with and without steps (third parameter you specify when implementing a slice)
+
+"""
+
+tags = [
+    'python',
+    'development',
+    'tutorials',
+    'code',
+    'programming',
+    'computer science'
+]
+
+# tag_range = tags [:-1:2]
+# tag_range = tags [::-1]
+
+tags.sort(reverse=True)
+
+print(tag_range)
+
+# the .sort() command ensures that items are sorted in alphabetical ascending or descending order. 
+
+# slice, which shows as [::], will re-order things precisely as they appear instead.
+
+"""
+
+# Quick use of the sorted function method within Python shown below.
+
+"""
+
+sales_prices = [
+    100,
+    83,
+    220,
+    40,
+    100,
+    400,
+    10,
+    1,
+    3
+]
+
+sorted_sales_prices = sorted(sales_prices, reverse=True)
+
+# "sorted()" will take in a list, and with reverse=True being part of the call, the return when we call sorted_sales_prices will show the sales_prices list ordered from highest number to lowest number.
+
+print(sorted_sales_prices)
+
+"""
+
+# Below is a demonstration of the same display above, but the below makes use of the math library instead of the "sorted" method.
+
+"""
+
+import math
+
+sale_prices = [
+  100,
+  83,
+  220,
+  40,
+  100,
+  400,
+  10,
+  1,
+]
+
+number_of_sales = len(sale_prices)
+sale_prices.sort()
+
+# Below you can see ways of manipulating the sale_prices list and call on different portions of the list for different statistical purposes.
+
+sorted_list = sorted(sale_prices)
+num_of_sales = len(sorted_list)
+first_sales_items = sorted_list[:math.floor(num_of_sales/2)]
+last_sales_items = sorted_list[-(math.floor(num_of_sales/2)):]
+median = sorted_list[math.floor(num_of_sales/2):(math.floor(num_of_sales/2) + 1)]
+
+print(sorted_list)
+print(num_of_sales)
+print(first_sales_items)
+print(last_sales_items)
+print(median)
+
+"""
+
+# Below is another demonstration of slices, making use of a specific slice pattern and declaring it in a variable. 
+# We then call on the list we want to slice, and instead of an index, we pass in the variable.  This causes the 
+# slice to fire and it requires us to use less code when calling the specific slice. It can be convenient
+# when you know you are going to use the same slice multiple times for a task.
+
+
+"""
+
+import math
+
+tags = [
+    'python',
+    'development',
+    'tutorials',
+    'code',
+    'programming',
+]
+
+print(tags[1:4:2])
+
+slice_obj = slice(1, 4, 2)
+
+print(slice_obj.start)
+print(slice_obj.stop)
+print(slice_obj.step)
+
+print(tags[slice_obj])
+
+"""
+
+# Below we have a demonstration of 'extending' a list. This is done by caling on the list directly, followed by '.extend(['item to extend'])', and the list will then
+# contain the value you extended it. You must do this in the form of a string inside an array.
+
+"""
+
+tags = ['python', 'development', 'tutorials', 'code']
+
+print(tags)
+
+# If you extend with the below syntax, you will get a return of each individual letter in the word 'programming', as their own individual string-values within the
+# array 'tags'. You must extend the item you want to extend in the form of an array.
+
+tags.extend('Programming')
+
+print(tags)
+
+# Below is what you want. The below will extend the 'tags' list the way we are intending. It will tack 'Programming' onto the end of the list like we are intending.
+
+tags.extend(['Programming']) 
+
+print(tags)
+
+# Below is a way to have two separate lists, one with the initial values to call on in case we need to and the 'new_tags' variable that is an 'extended' version of the
+# 'tags' list. 
+
+new_tags = tags + ['Programming']
+
+print(tags)
+print(new_tags)
+
+"""
+

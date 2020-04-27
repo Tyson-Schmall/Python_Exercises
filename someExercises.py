@@ -6,6 +6,7 @@ priority_index = {
     (1, "premier"): [7, 34, 12],
     (1, "mvp"): [84, 22, 21],
     (2, "standard"): [93, 81, 77],
+tags = 'python,coding,programming,development'
 }
 
 print(list(priority_index.keys()))

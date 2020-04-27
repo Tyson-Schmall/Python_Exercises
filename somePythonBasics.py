@@ -1,6 +1,7 @@
 # The below code is just how to declare variables. The two variables below contain different data types. The first, is a string. The second, is a number.
 # The following two lines, we are simply calling the two variables and printing their value into the console.
 
+"""
 name = 'Tyson'
 post_count = 42
 
@@ -9,6 +10,9 @@ print(post_count)
 
 x = 23
 y = 123
+
+"""
+
 # Single letter variable names are heavily discouraged. Best practice is to limit my comments in Python coding, and ensure that my variable names are well-thought-out.
 
 # Booleans - True or false value. * The way you designate if something is true, you use Capital T and spell out True. Same with False. Capital F and follow with the remaining letters to complete the word. 
@@ -25,6 +29,7 @@ y = 123
 
 # Below is an example of some basic math syntax in python. You can also see that you are able to reassign the value of a variable to the value of another variable, if you choose to do so.
 
+"""
 meal_completed = True
 total = 100
 tip = total * 1/5
@@ -42,7 +47,11 @@ first = third
 
 print(first)
 
+"""
+
 # Targeting different characters for capitalization. Using these 'functions' to modify the value contained within our targeted variable.
+
+"""
 
 sentence = 'the quick brown fox jumps over the lazy dog.'.capitalize()
 print(sentence)
@@ -62,17 +71,17 @@ print(sentence)
 # Strings are immutable, meaning we cannot alter the charactes in the string once it has been created. We are able to create a new variable that would be a modified version of our primary variable, but we are not able to modify the primary variable because strings are immutable.
 
 starter_sentence = 'The quick brown fox jumps over the lazy dog'
-print(starter_sentence[12]) = 'Z'
 print(starter_sentence) 
 
-# The above will not change the 12th index of the starter_sentence variable, because the starter_sentence variable is a string, strings are immutable.
-
+"""
 # below is a demonstration of ranges.
-""" 
+
+"""
 starter_sentence_two = 'The quick brown fox jumps over the lazy dog'
 first_word = starter_sentence_two[0:3]
 new_sentence= first_word
 print(new_sentence)
+
 """
 
 # Below is a demonstration of a string, and while being immutable, we find a way to spit out a new variable that is a modified version of the initial variable we used.
@@ -86,6 +95,8 @@ print(new_sentence)
 # .strip() is a string method in python, that removes whatever characters you pass into it. So if I 
 # wanted spaces at the start and end to be removed, I can just leave the paran's in .strip() blank.
 
+"""
+
 content = """
 Nullam id dolor id nibh ultricies vehicula ut id elit.   Nullam quis risus eget urna mollis ornare vel eu leo.
 
@@ -95,8 +106,12 @@ Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
 """.strip()
 print(content)
 
+"""
+
 # Below is just a little bit of math play. Declared variables possess numeric datatype values, we were shown
 # the basics of using if/else conditionals inside of the Python language.
+
+"""
 
 positive_number = 234
 negative_number = positive_number * -1
@@ -110,11 +125,11 @@ if pos_num > 0:
 else:
   print(num)
 
+"""
 
-print(email_content)
-
-# ######################################################################################################################################
 # Below is an example of string interpolation in Python. And there are two different ways displayed for how you can have these displayed.
+
+"""
 
 name_one = 'Skyllas'
 age_one = 5
@@ -140,7 +155,11 @@ print(header)
 print(_)
 print(subheader)
 
+"""
+
 # ######################################################################################################################################
+
+"""
 
 tags = 'python,coding,programming,development'
 
@@ -156,3 +175,114 @@ list_of_tags = tags.split()
 
 print(list_of_tags)
 
+"""
+
+# Below we have a showig of calling on a dictionary object's key, and having it's assigned values return.
+# We also have a print method showing we can specifically call on keys within an object, if we want to see their
+# corresponding values.
+# You are able to stash specific key-value pair data within individual variables if you want, this would be
+# considered better practice than grabbing object values EVERYTIME as the print statements show.
+
+"""
+
+teams = {
+    "astros": ["Altuve", "Correa", "Bregman"],
+    "angels": ["Trout", "Pujols"],
+    "yankees": ["Judge", "Stanton"]
+}
+
+astros = teams['astros']
+
+print(astros)
+print(teams["astros"])
+print(teams["angels"])
+print(teams["yankees"])
+
+"""
+
+# Below we have a way of simply calling on all object keys, and having all of their individual values returned.
+
+"""
+
+players = {
+  "ss" : "Correa",
+  "2b" : "Altuve",
+  "3b" : "Bregman",
+  "DH" : "Gattis",
+  "OF" : "Springer",
+}
+
+print(players.keys())
+
+"""
+
+# Below we have a demonstration of the '.get' method in Python. This method will get a spcecific key within a variable, you have to call on it in parans in the form of a string.
+# This can be used to check an object to see if it contains the value you are looking for. The 'no featured team' parameter is what will return if we call using .get doesn't exist
+# within the object we call .get on.
+
+"""
+
+# teams = {
+#   "astros" : ["Altuve", "Correa", "Bregman"],
+#   "angels":  ["Trout", "Pujols"],
+#   "yankees": ["Judge", "Stanton"],
+#   "red sox": ["Price", "Betts"],
+# }
+
+featured_teams = teams.get('mets', 'No featured team')
+
+print(featured_teams)
+
+"""
+
+# The below shows two ways to have a return from an object, be manipulated into displaying a number OF a variable's value, from outside the object, in the global scope.
+# The lower example is the better practice to attain what I want.
+
+"""
+dollar_sign = '$'
+
+Histogram = {
+    "Google" : 12 * dollar_sign,
+    "Facebook" : 20 * dollar_sign,
+    "Twitter" : 7 * dollar_sign,
+    "Instagram" : 9 * dollar_sign
+}
+
+print(Histogram) #This was my solve.
+
+Histogram_two = {
+    "Google" : 12,
+    "Facebook" : 20,
+    "Twitter" : 7,
+    "Instagram" : 9
+}
+
+print("G : " + Histogram_two["Google"] * "$") 
+print("F : " + Histogram_two["Facebook"] * "$") 
+print("T : " + Histogram_two["Twitter"] * "$") 
+print("I : " + Histogram_two["Instagram"] * "$")
+
+# From above, what returns from the print statement is "G : $$$$$$$$$$$$"
+# Each letter is representative of each key in the dictionary, and each number-value converts into a number of '$' instead. 
+# Useful in some statistical scenarios.
+
+"""
+
+# Below is a way to deconstruct a TUPLE of data (they are in parans like this, and are immutable), and store each value within the tuple, into variables. 
+# Not only that, but it is how to store multiple values at one time through mass assignment.
+
+"""
+
+post = ('Python Basics', 'Intro guide to Python', 'Python related content')
+
+title, sub_heading, content = post
+
+# title = post[0]
+# sub_heading = post[1]
+# content = post[2]
+
+print(title)
+print(sub_heading)
+print(content)
+
+"""
