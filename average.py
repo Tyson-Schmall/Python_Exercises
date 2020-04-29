@@ -16,9 +16,9 @@ print(average_calculator(average_me_out))
 """
 
 # Below is another way to execute the same code using reduce from functools.
-
+"""
 from functools import reduce
-
+"""
 # First, we pull from functools, the reduce method. Then we implement it in a way like below:
 
 """
