@@ -286,3 +286,87 @@ print(sub_heading)
 print(content)
 
 """
+# The below function, will take in a list of numbers, and it removes that list of numbers from a range created-within-the-function, of 0-21. 
+# This may be useful if applied properly, in scenarios related to inventory tracking, or other types of tracking scenarios.
+
+"""
+
+def remove_nums(omit_list):
+    num_list = list(range(21))
+
+    for num in omit_list:
+        num_list.remove(num)
+    return num_list
+
+    for num in num_list:
+        if num in omit_list:
+            num_list.remove(num)
+
+print(remove_nums([1, 2, 3]))
+
+"""
+
+# Below is a function that will generate raw HTML code based on the parameters you provide it; Using string interpolation. 
+
+"""
+
+def heading_generator_two(title, heading_type):
+    if heading_type <=6:
+        return f"<h{heading_type}>{title}</h{heading_type}>"
+
+    else: 
+        return('Please ensure the type you are entering is compatible with the type in arg2 of this function')
+        
+print(heading_generator_two('A secondary title example', 5))
+
+"""
+# Below, using a for loop to print out a number between a range of 1, and the number you pass into the function.
+# May be useful in situations related to running scenarios time and time again for statistical analysis.
+
+"""
+
+def hundred_count(highest_count):
+    for num in range(1, highest_count):
+        print(num)
+
+hundred_count(501)
+
+"""
+# Below is just an example of assigning default values to parameters of a function, and what happens when calling on that same function.
+# We have a return showing the greeting function being called with nothing passed in, and then again with a name passed in.
+
+"""
+
+def greeting(name = 'Guest'):
+    return(f'Hi {name}!')
+
+
+print(greeting())
+print(greeting('Skyllas'))
+
+"""
+
+# Below you can see a function that takes in a time of day, a first and last name, and then a number of tasks to render.
+# This could be implented in a way to trigger and generate automatically for an employee after clocking in or signing in
+# to their shift at work. Could be a very useful tool to provide employees what they need to get goin on work immediately.
+
+"""
+
+def greeting(time_of_day, *args, **kwargs):
+    print(f"Hi {' '.join(args)}, I hope that you are having a great {time_of_day}")
+
+    if kwargs:
+        print('Your tasks for the day are:')
+        for key, val in kwargs.items():
+            print(f"{key} => {val}")
+
+greeting("Morning", 
+         "Skyllas", "Mercier",
+         first = "Empty Diswasher",
+         second = "Take the dog outside",
+         third = "Math Homework")
+
+"""
+
+# 
+
